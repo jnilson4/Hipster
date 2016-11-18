@@ -19,7 +19,7 @@ public class Hipster
 	
 	public void calculateHipsterRank()
 	{
-		hipsterRank = (int)(Math.random() * 10);
+		hipsterRank = (int)(Math.random() * 100);
 	}
 	
 	public void calculateHipsterRank(int scale)
