@@ -16,7 +16,7 @@ public class HipsterController
 		
 		hipsters = new Hipster [6];
 		
-		for (int index = 0; index < hipsters.length; index++)
+		for(int index = 0; index < hipsters.length; index++)
 		{
 			hipsters[index] = new Hipster("Hipster # " + index);
 		}
@@ -31,12 +31,6 @@ public class HipsterController
 	
 	public void start()
 	{
-		for(int index = 0; index < hipsters.length; index++)
-		{
-			hipsters[index] = new Hipster("Hipster # " + index);
-		}
-		
-		
 		for(Hipster currentHipster : hipsters)
 		{
 			System.out.print(currentHipster +", ");
