@@ -6,7 +6,6 @@ import hipster.view.HipsterFrame;
 public class HipsterController
 {
 	private HipsterFrame appFrame;
-	
 	private int [] numbers;
 	private String [] words= {"This ", "is the ", "second hipster","level: ","initialization ","lists"};
 	private Hipster [] hipsters;
@@ -14,7 +13,14 @@ public class HipsterController
 	public HipsterController()
 	{
 		thirdLevelHipster();
+		
 		hipsters = new Hipster [6];
+		
+		for (int index = 0; index < hipsters.length; index++)
+		{
+			hipsters[index] = new Hipster("Hipster # " + index);
+		}
+		
 		appFrame = new HipsterFrame(this);
 	}
 	
@@ -46,6 +52,14 @@ public class HipsterController
 		for(int tempInt : numbers)
 		{
 			System.out.print(tempInt + ", ");
+		}
+	}
+	
+	public void impactHipsters()
+	{
+		for(Hipster currentHipster : hipsters)
+		{
+			currentHipster.calculateHipsterRank();
 		}
 	}
 	
